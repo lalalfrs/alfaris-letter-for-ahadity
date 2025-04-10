@@ -20,28 +20,29 @@ function createFlowers() {
         }, 5000); // Hapus bunga setelah 5 detik
     }
 }
-function sendEcho() {
-    const text = document.getElementById("🌸🌸🌸").value;
-    for (let i = 0; i < 26; i++) {
+
+  function sendEcho() {
+    const emojis = ["🌸", "❤️"];
+    for (let i = 0; i < 20; i++) {
       const bubble = document.createElement("div");
       bubble.className = "bubble";
-      bubble.innerText = text;
+      bubble.innerText = emojis[Math.floor(Math.random() * emojis.length)];
 
-      // Acak posisi
+      // Posisi acak
       bubble.style.left = `${Math.random() * window.innerWidth}px`;
       bubble.style.top = `${Math.random() * window.innerHeight}px`;
 
-      // Acak ukuran & warna
-      bubble.style.fontSize = `${14 + Math.random() * 20}px`;
-      bubble.style.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+      // Ukuran & warna acak
+      bubble.style.fontSize = `${20 + Math.random() * 15}px`;
+      bubble.style.color = `hsl(${Math.random() * 360}, 100%, 75%)`;
 
       document.body.appendChild(bubble);
 
-      // Hapus bubble setelah selesai animasi
+      // Hapus setelah animasi
       setTimeout(() => {
         bubble.remove();
       }, 5000);
     }
-
-    document.getElementById("textInput").value = "";
   }
+
+
