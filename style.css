@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #C7FFD8; /* Warna latar belakang kalem */
+    background-color: #FDB7EA; /* Warna latar belakang kalem */
     margin: 0;
     overflow: hidden;
 }
@@ -58,3 +58,21 @@ body {
         font-size: 6vw; /* Ukuran lebih besar untuk pesan */
     }
 }
+.bubble {
+      position: absolute;
+      font-size: 20px;
+      opacity: 0;
+      animation: floatUp 5s ease-out forwards;
+    }
+
+    
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+    }
