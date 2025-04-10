@@ -23,7 +23,7 @@ button {
     box-shadow: 0 8px 20px rgba(244, 143, 177, 0.4);
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+ font-family: 'Quicksand', sans-serif;
   }
   
   button:hover {
